@@ -1,0 +1,5 @@
+-- Run once in your existing ARMELLE MySQL database via phpMyAdmin. Backup first.
+CREATE TABLE IF NOT EXISTS `ClinicPromotions` (`Id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,`Title` varchar(120) NOT NULL,`Description` varchar(1000) NOT NULL DEFAULT '',`PromoCode` varchar(50) NOT NULL DEFAULT '',`DiscountValue` decimal(18,2) NOT NULL DEFAULT 0,`DiscountType` varchar(20) NOT NULL DEFAULT 'Percent',`StartsAt` datetime(6) NOT NULL,`EndsAt` datetime(6) NOT NULL,`IsPublished` tinyint(1) NOT NULL DEFAULT 0,`CreatedAt` datetime(6) NOT NULL,`CreatedBy` longtext NOT NULL);
+CREATE TABLE IF NOT EXISTS `PromotionAudits` (`Id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,`PromotionId` int NOT NULL,`Action` longtext NOT NULL,`OwnerUsername` longtext NOT NULL,`AtUtc` datetime(6) NOT NULL,`Details` longtext NOT NULL);
+CREATE TABLE IF NOT EXISTS `PromotionRedemptions` (`Id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,`PromotionId` int NOT NULL,`PatientUserId` int NOT NULL,`RedeemedAtUtc` datetime(6) NOT NULL,`RecordedBy` longtext NOT NULL,`Reference` longtext NOT NULL);
+CREATE INDEX `IX_PromotionRedemptions_PatientUserId` ON `PromotionRedemptions` (`PatientUserId`);

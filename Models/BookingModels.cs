@@ -1,0 +1,4 @@
+namespace Armelle.Models;
+public class BookingPageVm{public List<ClinicLocation> Branches{get;set;}=[];public List<ClinicService> Services{get;set;}=[];public BookingResultVm? Result{get;set;}}
+public class BookingRequest{public string Patient{get;set;}="";public string Contact{get;set;}="";public string Branch{get;set;}="";public string Service{get;set;}="";public DateTime PreferredDate{get;set;}=DateTime.Today.AddDays(1);public string PaymentMethod{get;set;}="Pay at Clinic";public IFormFile? PaymentProof{get;set;}}
+public class BookingResultVm{public string ReferenceNo{get;set;}="";public string Doctor{get;set;}="";public string Branch{get;set;}="";public string Service{get;set;}="";public DateTime Start{get;set;}public DateTime End{get;set;}public string Room{get;set;}="";public List<string> Nurses{get;set;}=[];public string PaymentStatus{get;set;}="";}

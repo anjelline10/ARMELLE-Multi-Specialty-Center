@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 71,
+    "Title": "Prescription Processing",
+    "ImagePath": "/uploads/gallery/e963f5aaff4d48a5b3a992870689927c.png",
+    "IsCustom": true
+  },
+  {
+    "Id": 45,
+    "Title": "Urology Consultation",
+    "ImagePath": "/uploads/gallery/f6b19d4d021f4c5692970e73ef2eab1f.png",
+    "IsCustom": true
+  },
+  {
+    "Id": 95,
+    "Title": "Security \u0026 Monitoring",
+    "ImagePath": "/uploads/gallery/6b9785bd4b714fc98a9ad31a557bb193.png",
+    "IsCustom": true
+  }
+]
